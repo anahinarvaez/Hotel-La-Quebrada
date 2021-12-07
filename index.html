@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>La Quebrada</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img class="logo__img" src="img/logomontana.svg" alt="logo" />
+        </a>
+        <ul class="nav__vinculos">
+          <li class="nav__vinculo"><a href="index.html">Bienvenidos</a></li>
+          <li class="nav__vinculo">
+            <a href="pages/servicios.html">Servicios</a>
+          </li>
+          <li class="nav__vinculo"><a href="pages/tarifas.html">Tarifas</a></li>
+          <li class="nav__vinculo">
+            <a href="pages/novedades.html">Novedades</a>
+          </li>
+          <li class="nav__vinculo">
+            <a href="pages/contacto.html">Contacto</a>
+          </li>
+          <li class="toggle">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="grid">
+      <section class="imagen-principal">
+        <img
+          class="imagen-principal__img"
+          src="img/Foto1.jpg"
+          alt="Foto Hotel"
+        />
+      </section>
+      <section class="texto index">
+        <img
+          class="decoracion"
+          src="img/3_6_la_pampa_marron.png"
+          alt="decoracion"
+        />
+        <div class="texto__container">
+          <p class="texto__subtitulo">-Bienvenidos al Hotel Boutique-</p>
+          <h1 class="texto__titulo index">La Quebrada</h1>
+        </div>
+        <img
+          class="decoracion"
+          src="img/3_6_la_pampa_marron.png"
+          alt="decoracion"
+        />
+      </section>
+      <section class="habitaciones">
+        <h2 class="habitaciones__titulo">Habitaciones</h2>
+        <div class="habitaciones__grid">
+          <div>
+            <img
+              class="habitaciones__img"
+              src="img/hab-pre-1-1030x554.jpg"
+              alt="Imagen Suite Premium"
+            />
+            <p class="habitaciones__descripcion">Suite Premium</p>
+          </div>
+          <div>
+            <img
+              class="habitaciones__img"
+              src="img/hab-sup-1-1030x554.jpg"
+              alt="Imagen Habitaciones Supeiores"
+            />
+            <p class="habitaciones__descripcion">Habitaciones Superiores</p>
+          </div>
+        </div>
+      </section>
+      <section class="mapa">
+        <div class="mapa__contenido">
+          <p class="mapa__texto">
+            A 1 kilometro de la plaza principal de Tilcara, corazón cultural de
+            la quebrada de Humahuaca, y rodeado de majestuosas montañas y cerros
+            de colores, Hotel Boutique La Quebrada permite disfrutar de todo el
+            confort en un entorno natural privilegiado
+          </p>
+          <p class="mapa__texto">
+            El estilo arquitectónico, la combinación de los materiales del lugar
+            y la calidez de su mobiliario y decoración, respetan la cultura
+            autóctona y se integran armoniosamente con la belleza del paisaje.
+          </p>
+        </div>
+        <img
+          class="mapa__img"
+          src="img/Tilcara_(Provincia_de_Jujuy_-_Argentina).svg.png"
+          alt="Mapa Ubicacion Hotel"
+        />
+      </section>
+      <section class="slogan">
+        <p class="slogan__texto">El máximo confort para tu estadía</p>
+      </section>
+      <section class="servicios">
+        <div
+          id="servicios__descripcion-restaurante"
+          class="servicios__descripcion"
+        >
+          <h2>Restaurante</h2>
+          <p>
+            Nuestro chef ha diseñado un variado menú gastronómico, utilizando
+            ingredientes exclusivos de la Quebrada de Humahuaca. Las papas
+            andinas, la quínoa y el maíz entre otros han formado parte de la
+            dieta de los pueblos originarios durante miles de años, y permiten a
+            nuestros huéspedes experimentar nuevos aromas, sabores y texturas
+            del Norte Argentino.
+          </p>
+        </div>
+        <div id="servicios__img-restaurante">
+          <img
+            class="servicios__img"
+            src="img/resto1.jpg"
+            alt="Imagen Restaurante"
+          />
+        </div>
+        <div id="servicios__img-spa">
+          <img
+            class="servicios__img"
+            src="img/spa1-1030x686.jpg"
+            alt="Imagen Spa del hotel"
+          />
+        </div>
+        <div id="servicios__descripcion-spa" class="servicios__descripcion">
+          <h2>Spa</h2>
+          <p>
+            Spa – piscina de hidromasajes, ducha escocesa y sala de masajes.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__titulo">¡Disfruta de tu estancia!</p>
+      <div class="footer__social-media">
+        <img
+          class="footer__social-media-img"
+          src="img/logo-instagram.png"
+          alt="Logo Instagram"
+        />
+        <img
+          class="footer__social-media-img"
+          src="img/logo-facebook.png"
+          alt="Logo Facebook"
+        />
+      </div>
+      <div class="footer__copyright">@copyright - La Quebrada</div>
+    </footer>
+    <script>
+      $(function () {
+        $(".toggle").on("click", function () {
+          if ($(".nav__vinculo").hasClass("active")) {
+            $(".nav__vinculo").removeClass("active");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+          } else {
+            $(".nav__vinculo").addClass("active");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

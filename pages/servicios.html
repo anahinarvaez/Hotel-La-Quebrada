@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Servicios</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="../index.html" class="logo">
+          <img class="logo__img" src="../img/logomontana.svg" alt="logo" />
+        </a>
+        <ul class="nav__vinculos">
+          <li class="nav__vinculo"><a href="../index.html">Bienvenidos</a></li>
+          <li class="nav__vinculo"><a href="servicios.html">Servicios</a></li>
+          <li class="nav__vinculo"><a href="tarifas.html">Tarifas</a></li>
+          <li class="nav__vinculo"><a href="novedades.html">Novedades</a></li>
+          <li class="nav__vinculo"><a href="contacto.html">Contacto</a></li>
+          <li class="toggle">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="servicios-page-grid">
+      <section class="imagen-principal">
+        <img
+          class="imagen-principal__img"
+          src="../img/fondoservicios.jpg"
+          alt="Foto Masajes"
+        />
+      </section>
+      <section class="texto__servicios">
+        <img
+          class="decoracion"
+          src="../img/3_6_la_pampa_marron.png"
+          alt="decoracion"
+        />
+        <div class="texto__container">
+          <h1 class="texto__titulo servicios">Nuestros Servicios</h1>
+        </div>
+        <img
+          class="decoracion"
+          src="../img/3_6_la_pampa_marron.png"
+          alt="decoracion"
+        />
+      </section>
+      <!--Seccion imagen y texto-->
+      <section class="servicios-page-flex">
+        <div class="servicios-page__textos">
+          <h2>Propuesta gastronómica</h2>
+          <ul>
+            <li>Restaurante</li>
+            <li>Desayuno Completo a la Carta</li>
+            <li>Snack Bar</li>
+          </ul>
+        </div>
+        <div>
+          <img
+            class="servicios-page__img"
+            src="../img/post-desayuno-2-600x600.jpg"
+            alt="Imagen desayuno"
+          />
+        </div>
+        <div>
+          <img
+            class="servicios-page__img"
+            src="../img/massage_face-600x400.jpg"
+            alt="Imagen Masaje Facial"
+          />
+        </div>
+        <div class="servicios-page__textos">
+          <h2>Relax y Bienestar</h2>
+          <ul>
+            <li>Spa</li>
+            <li>Masajes</li>
+            <li>Piscina al aire libre</li>
+          </ul>
+        </div>
+        <div class="servicios-page__textos">
+          <h2>Amenities</h2>
+          <ul>
+            <li>Amenities</li>
+            <li>Salón de eventos</li>
+            <li>Amplios jardines</li>
+            <li>Patio con asador y horno de barro</li>
+            <li>Deposito de equipaje</li>
+            <li>Camas y cunas adicionales</li>
+            <li>Room service (consultar en recepcion)</li>
+            <li>Lavaderia</li>
+            <li>
+              Servicio de conserjeria (asesoramiento para paseos,
+              excursiones,reserva en restaurantes e informacion general
+            </li>
+            <li>Wi Fi</li>
+            <li>Estacionamiento</li>
+          </ul>
+        </div>
+        <div>
+          <img
+            class="servicios-page__img"
+            src="../img/jardines-3-600x450.jpg"
+            alt="Imagen del Patio de Lavandas"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__titulo">¡Disfruta de tu estancia!</p>
+      <div class="footer__social-media">
+        <img
+          class="footer__social-media-img"
+          src="../img/logo-instagram.png"
+          alt="Logo Instagram"
+        />
+        <img
+          class="footer__social-media-img"
+          src="../img/logo-facebook.png"
+          alt="Logo Facebook"
+        />
+      </div>
+      <div class="footer__copyright">@copyright - La Quebrada</div>
+    </footer>
+    <script>
+      $(function () {
+        $(".toggle").on("click", function () {
+          if ($(".nav__vinculo").hasClass("active")) {
+            $(".nav__vinculo").removeClass("active");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+          } else {
+            $(".nav__vinculo").addClass("active");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
