@@ -14,10 +14,7 @@ body {
 .carousel-inner {
   max-height: 39rem;
 }
-.grid {
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
+
 .texto {
   display: flex;
   align-items: center;
@@ -57,27 +54,32 @@ body {
     align-items: center;
     justify-content: flex-start;
     background-color: #351a00;
-    width: 45%;
+    width: 100%;
   }
+
   .texto__titulo.index {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 34px;
     margin-bottom: 50px;
   }
+
   .texto__subtitulo {
     font-size: 12px;
     margin-top: 25px;
   }
+
   .texto__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: white;
-    width: 33.33%;
+    width: 80%;
+    height: 40%;
   }
+
   .texto__subtitulo {
     font-size: 12px;
   }
@@ -86,7 +88,8 @@ body {
     margin-bottom: 1rem;
   }
 }
-.btn-wsp {
+
+.btn-wsp{
   position: fixed;
   width: 55px;
   height: 55px;
@@ -98,98 +101,160 @@ body {
   border-radius: 50px;
   text-align: center;
   font-size: 30px;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
   z-index: 100;
 }
 
-.btn-wsp:hover {
+.btn-wsp:hover{
   text-decoration: none;
   color: #0df053;
   background-color: white;
-}
-/* =======================================================*/
-/*-- Bienvenidos--*/
-/* =======================================================*/
 
-/* Habitaciones*/
-.habitaciones {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #f4d69a;
 }
-.habitaciones__grid {
+
+
+/* =======================================================*/
+/*-- Contacto --*/
+/* =======================================================*/
+.contacto-grid {
   display: grid;
-  grid-template-columns: 400px 400px;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-.habitaciones__img {
-  width: 100%;
-  height: 100%;
-}
-.habitaciones__img:hover {
-  transform: scale(2, 2);
-}
-.habitaciones__descripcion {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: white;
+  grid-template-rows: 1fr 3fr 2.5fr 2fr auto;
 }
 
-/* Mapa*/
-.mapa {
-  background-color: white;
-  padding-top: 15px;
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 600px){
+  .contacto-grid {
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 1.5fr 0.8fr auto;
+  }
 }
-.mapa__contenido {
-  width: 30%;
-  height: 70%;
+
+
+.contacto__form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background-image: url("../img/imageedit_3_7909369259.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 10%;
+  padding-right: 10%;
 }
-.mapa__img {
-  width: 30%;
-  height: 70%;
-}
-/* Slogan*/
-.slogan {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f4d69a;
-  font-size: 36px;
+.texto__titulo.contacto {
+  font-size: 54px;
   font-weight: bold;
+  text-shadow: 2px 2px 5px #a56830;
 }
-/*Servicios*/
-.servicios {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: white;
+
+.contacto__datos {
+  height: 8%;
 }
-.servicios div {
-  width: 50%;
-  height: 50%;
+.contacto__datos input {
+  width: 25%;
+  height: 100%;
+  margin-right: 20px;
+  border: 3px solid #f6b511;
 }
-.servicios__img {
+.contacto__mensaje {
+  height: 45%;
+}
+.contacto__mensaje textarea {
   height: 100%;
   width: 100%;
+  resize: none;
+  border: 3px solid #f6b511;
 }
-.servicios__descripcion {
+.contacto__boton {
+  height: 8%;
+}
+.contacto__boton button {
+  height: 100%;
+  width: 20%;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(255, 209, 67, 1) 0%,
+    rgba(255, 145, 83, 1) 90%
+  );
+  color: white;
+  border: 3px solid #f6b511;
+  border-radius: 11px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+.contacto__boton button:hover {
+  color: #351a00;
+  background-image: linear-gradient(
+    0.9deg,
+    rgba(253, 144, 0, 1) 21.1%,
+    rgba(254, 227, 130, 1) 96.8%
+  );
+}
+
+.contacto__informacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.contacto__informacion div {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.contacto__amarillo {
+  color: #f6b511;
+}
+.contacto__marron {
+  color: #351a00;
+}
+.titulo__direccion {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
+
+  font-size: 48px;
+  font-weight: bold;
+  background-color: #f4d69a;
+  height: 30%;
 }
+.mapa-google {
+  width: 100%;
+  height: 400px;
+  padding-bottom: 90px;
+}
+
+
+@media screen and (max-width: 600px){
+  .contacto__datos input{
+  width: 100%;
+  margin-right: 20px;
+  border: 3px solid #f6b511;
+  height: 60%;
+  margin-top: 20px;
+  }
+
+  .contacto__mensaje textarea {
+    height: 100%;
+    width: 100%;
+    resize: none;
+    margin-top: 20px;
+    border: 3px solid #f6b511;
+  }
+  
+  .contacto__boton button {
+    height: 80%;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
 
 /* =======================================================*/
 /*-- Footer --*/
@@ -277,20 +342,35 @@ footer {
   text-decoration: none;
 }
 
-@media screen and (max-width: 715px) {
+@media screen and (max-width: 600px) {
   .container-footer {
-    flex-wrap: wrap;
+    flex-direction: column ;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
   }
-  .columna1 {
-    padding: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .row2{
+    margin-left: 0;
   }
-  .columna2 {
-    padding: 20px;
-    padding-left: 80px;
+  .row{
+    margin-left: 0;
   }
-  .columna3 {
-    padding-right: 80px;
+  .columna2 h1{
+    margin-left: 0;
+
+
   }
+  .columna3 h1{
+    margin-left: 0;
+    
+  }
+  .container-footer2{
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+  
 }
+
