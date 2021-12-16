@@ -1,0 +1,12 @@
+#navbarNav {
+    a {
+      font-size: 18px;
+      color: $principal;
+      text-shadow: 2px 2px 5px $suave;
+  
+      &:hover {
+        background: $claro;
+        border-radius: 5px;
+      }
+    }
+  }
