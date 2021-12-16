@@ -1,0 +1,109 @@
+footer {
+    background: $claro;
+  }
+  .container-footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  
+    &__informacion {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      @media screen and (max-width: $phone) {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      }
+      &__nosotros {
+        max-width: 400px;
+        h1 {
+          font-size: 24px;
+          margin: 10px;
+          font-weight: bold;
+          padding-top: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin-top: 20px;
+          color: $oscuro;
+        }
+      }
+  
+      &__redes {
+        h1 {
+          font-size: 24px;
+          margin-left: 30px;
+          margin-top: 10px;
+          font-weight: bold;
+          padding-top: 20px;
+  
+          @media screen and (max-width: $phone) {
+            margin-left: 0;
+          }
+        }
+        .row {
+          color: $oscuro;
+          margin-top: 10px;
+          margin-left: 20px;
+  
+          @media screen and (max-width: $phone) {
+            margin-left: 0;
+          }
+        }
+      }
+  
+      &__contacto {
+        max-width: 400px;
+        h1 {
+          font-size: 22px;
+          margin-left: 90px;
+          margin-top: 10px;
+          font-weight: bold;
+          padding-top: 20px;
+  
+          @media screen and (max-width: $phone) {
+            margin-left: 0;
+          }
+        }
+  
+        div {
+          margin-top: 20px;
+          margin-left: 90px;
+          color: $oscuro;
+  
+          @media screen and (max-width: $phone) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    &__copyright {
+      background-color: $oscuro;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      padding-left: 80px;
+      padding-right: 80px;
+      @media screen and (max-width: $phone) {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+  
+      &__derechos {
+        color: $amarillo;
+        font-style: oblique;
+      }
+      &__terminos {
+        a {
+          color: $blanco;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
