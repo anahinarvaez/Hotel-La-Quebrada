@@ -1,13 +1,29 @@
-@import 'variables';
-@import 'footer';
-@import 'nav';
+@import "variables";
+@import "footer";
+@import "nav";
+
+@mixin sizes($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+$lugares:(
+  cerro-7colores: #4d2b39,
+  garganta-del-diablo: #5acbe7,
+  salinas: #b2dd14,
+  hornocal: #20bf55
+  );
+
+$fuentes:(
+  titulo: (color: $principal, tamaño: 64px),
+  subtitulos: (color: $oscuro, tamaño: 24px),
+  texto: (color: $principal, tamaño:18px),
+);
 
 body {
   color: $principal;
   font-family: "Zilla Slab", serif;
 }
-
-
 
 .carousel-inner {
   max-height: 39rem;
@@ -25,12 +41,10 @@ body {
 }
 
 .decoracion {
-  height: 200px;
-  width: 300px;
+  @include sizes(300px, 200px);
 
   @media screen and (max-width: $phone) {
-    height: 50px;
-    width: 50px;
+    @include sizes(50px, 50px);
   }
 }
 
@@ -54,26 +68,28 @@ body {
     align-items: center;
     justify-content: center;
     background-color: $blanco;
-    width: 100%;
-    height: 80%;
+    @include sizes(100%, 80%);
 
     @media screen and (max-width: $phone) {
+      @include sizes(80%, 45%);
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: $blanco;
-      width: 80%;
-      height: 45%;
     }
   }
 
   &__titulo {
-    font-size: 64px;
+    @include sizes(100%, 100%);
+
+    color: map-get($fuentes , titulo, color );
+
+    font-size: map-get($fuentes , titulo, tamaño );
     font-weight: bold;
     text-align: center;
-    width: 100%;
-    height: 100%;
+
     margin-top: 40px;
 
     @media screen and (max-width: $phone) {
@@ -91,7 +107,8 @@ body {
     justify-content: center;
     height: 80px;
     background-color: $claro;
-    font-size: 24px;
+    font-size: map-get($fuentes, subtitulos, tamaño);
+    color: map-get($fuentes, subtitulos, color );
 
     @media screen and (max-width: $phone) {
       p {
@@ -120,15 +137,19 @@ body {
   }
 
   &__tarjeta {
-    width: 100%;
-    height: 90%;
+    @include sizes(100%, 90%);
     &__img {
-      width: 100%;
-      height: 80%;
-      &:hover {
-        transform: scale(1.5, 1.5);
+      @include sizes(100%, 80%);
+      
+      @each $lugar, $color in $lugares {
+        &##{$lugar}:hover {
+          transform: scale(1.5, 1.5);
+          border: 8px solid $color; 
+        }
       }
     }
+
+
     &__descripcion {
       display: flex;
       align-items: center;
@@ -138,7 +159,21 @@ body {
       font-weight: bold;
       background-color: $claro;
       height: 45px;
+
+      
+    @each $lugar, $color in $lugares{
+
+      &-#{$lugar} {
+        @extend .novedades__tarjeta__descripcion ;
+        background-color: $color;
+      }
+
     }
+
+    }
+
+
+
   }
 }
 
@@ -151,7 +186,7 @@ body {
 }
 
 .accordion-collapse.collapse {
-  font-size: 18px;
+  font-size: map-get($fuentes, texto, tamaño);
 }
 
 .accordion-button {
@@ -170,9 +205,9 @@ body {
 }
 
 .btn-wsp {
+  @include sizes(55px, 55px);
+
   position: fixed;
-  width: 55px;
-  height: 55px;
   line-height: 55px;
   bottom: 30px;
   right: 30px;
@@ -190,4 +225,3 @@ body {
     background-color: $blanco;
   }
 }
-
