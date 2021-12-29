@@ -1,0 +1,25 @@
+{
+  "name": "hotel-la-quebrada",
+  "version": "1.0.0",
+  "description": "Esta es una pagina realizada durante el curso de desarrollo web de Coderhouse.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass scss --output css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anahinarvaez/Hotel-La-Quebrada.git"
+  },
+  "author": "Anahi Narvaez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anahinarvaez/Hotel-La-Quebrada/issues"
+  },
+  "homepage": "https://github.com/anahinarvaez/Hotel-La-Quebrada#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
