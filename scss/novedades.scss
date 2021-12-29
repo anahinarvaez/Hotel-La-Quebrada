@@ -39,8 +39,8 @@ $lugares: (
     justify-content: center;
     height: 80px;
     background-color: $claro;
-    font-size: map-get($fuentes, subtitulos, tamaño);
-    color: map-get($fuentes, subtitulos, color);
+    font-size: 24px;
+    color: $oscuro;
 
     @media screen and (max-width: $phone) {
       p {
@@ -110,7 +110,7 @@ $lugares: (
 }
 
 .accordion-collapse.collapse {
-  font-size: map-get($fuentes, texto, tamaño);
+  font-size: 18px;
 }
 
 .accordion-button {

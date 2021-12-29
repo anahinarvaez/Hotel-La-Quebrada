@@ -1,353 +1,292 @@
-
-body {
-    color: #a56830;
-    font-family: "Zilla Slab", serif;
-  }
-  #navbarNav a {
-    font-size: 18px;
-    color: #a56830;
-    text-shadow: 2px 2px 5px #d3b667;
-  }
-  #navbarNav a:hover {
-    background: #f4d69a;
-    border-radius: 5px;
-  }
-  .carousel-inner {
-    max-height: 39rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-rows: auto 1fr;
-  }
-  
-  .texto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #351a00;
-  }
-  
-  .texto__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    width: 100%;
-    height: 80%;
-  }
-  .texto__subtitulo {
-    font-size: 18px;
-  }
-  .texto__titulo.index {
-    font-size: 64px;
-    font-weight: bold;
-    text-align: center;
-  }
-  .decoracion {
-    height: 200px;
-    width: 300px;
-  }
-  
-  @media screen and (max-width: 600px){
-    .decoracion {
-      height: 50px;
-      width: 50px;
-    }
-    .texto {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      background-color: #351a00;
-      width: 45%;
-    }
-    
-    .texto__titulo.index {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 0px;
-      margin-bottom: 50px;
-      
-    }
-    
-    .texto__subtitulo {
-      font-size: 12px;
-      margin-top: 25px;
-    }
-    
-    .texto__container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: white;
-      width: 33.33%;
-    }
-    
-    .texto__subtitulo {
-      font-size: 12px;
-    }
-    .p {
-      margin-top: 20px;
-      margin-bottom: 1rem;
-    }
-  }
-  .btn-wsp{
-    position: fixed;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    bottom: 30px;
-    right: 30px;
-    background: #0df053;
-    color: white;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
-    z-index: 100;
-  }
-  
-  .btn-wsp:hover{
-    text-decoration: none;
-    color: #0df053;
-    background-color: white;
-  
-  }
-/* =======================================================*/
-/*-- Tarifas --*/
-/* =======================================================*/
-.tarifas-grid {
-    display: grid;
-    grid-template-rows: 1fr;
-  }
-  .texto__titulo.tarifas {
-    font-size: 54px;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px #a56830;
-  }
-  .tarifas__descripcion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #f4d69a;
-  }
-  .tarifas__descripcion p {
-    margin: 10px;
-    font-size: 22px;
-    font-weight: bold;
-  }
-  .tarifas__cards {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "Zilla Slab", serif;
-  }
-  .tarifas__fila {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .tarifas__card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background-color: #351a00;
-    width: 10%;
-  }
-  .tarifas__card-titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #a56830;
-    background-color: #f6b511;
-    height: 33%;
-    width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  .tarifas__precio {
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-  }
-  
-  .tarifas__card-button {
-    background-image: radial-gradient(
-      circle farthest-corner at 10% 20%,
-      rgba(255, 209, 67, 1) 0%,
-      rgba(255, 145, 83, 1) 90%
-    );
-    color: white;
-    border: 3px solid #f6b511;
-    border-radius: 11px;
-    width: 95%;
-    height: 25%;
-    margin-bottom: 7.5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 15px;
-    font-weight: bold;
-    position: relative;
-  }
-  .tarifas__card-button:hover {
-    color: #351a00;
-    background-image: linear-gradient(
-      0.9deg,
-      rgba(253, 144, 0, 1) 21.1%,
-      rgba(254, 227, 130, 1) 96.8%
-    );
-  }
-  .tarifas__titulo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-  
-    /*Animaciones*/
-    animation-name: tarifas__titulo;
-    animation-duration: 4s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes tarifas__titulo {
-    0% {
-      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    }
-    100% {
-      text-shadow: 0 9px 18px rgba(0, 0, 0, 0.35);
-    }
-  }
-
-
-
-  /* =======================================================*/
-/*-- Footer --*/
-/* =======================================================*/
-
 footer {
-    background: #f4d69a;
-  }
-  
-  .container-footer-all {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-  }
-  .container-footer {
+  background: #f4d69a; }
+
+.container-footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto; }
+  .container-footer__informacion {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
-  }
-  .columna1 {
-    max-width: 400px;
-  }
-  .columna1 h1 {
-    font-size: 24px;
-    margin: 10px;
-    font-weight: bold;
-    padding-top: 20px;
-  }
-  .columna1 p {
-    font-size: 14px;
-    margin-top: 20px;
-    color: #351a00;
-  }
-  
-  .columna2 {
-    max-width: 400px;
-  }
-  .columna2 h1 {
-    font-size: 24px;
-    margin-left: 30px;
-    margin-top: 10px;
-    font-weight: bold;
-    padding-top: 20px;
-  }
-  .columna2 row {
-    margin-top: 20px;
-    display: flex;
-  }
-  .row {
-    color: #351a00;
-    margin-top: 10px;
-    margin-left: 20px;
-  }
-  .columna3 {
-    max-width: 400px;
-  }
-  .columna3 h1 {
-    font-size: 22px;
-    margin-left: 90px;
-    margin-top: 10px;
-    font-weight: bold;
-    padding-top: 20px;
-  }
-  .row2 {
-    margin-top: 20px;
-    margin-left: 90px;
-    color: #351a00;
-  }
-  .container-footer2 {
+    padding-bottom: 20px; }
+    @media screen and (max-width: 600px) {
+      .container-footer__informacion {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center; } }
+    .container-footer__informacion__nosotros {
+      max-width: 400px; }
+      .container-footer__informacion__nosotros h1 {
+        font-size: 24px;
+        margin: 10px;
+        font-weight: bold;
+        padding-top: 20px; }
+      .container-footer__informacion__nosotros p {
+        font-size: 14px;
+        margin-top: 20px;
+        color: #351a00; }
+    .container-footer__informacion__redes h1 {
+      font-size: 24px;
+      margin-left: 30px;
+      margin-top: 10px;
+      font-weight: bold;
+      padding-top: 20px; }
+      @media screen and (max-width: 600px) {
+        .container-footer__informacion__redes h1 {
+          margin-left: 0; } }
+    .container-footer__informacion__redes .row {
+      color: #351a00;
+      margin-top: 10px;
+      margin-left: 20px; }
+      @media screen and (max-width: 600px) {
+        .container-footer__informacion__redes .row {
+          margin-left: 0; } }
+    .container-footer__informacion__contacto {
+      max-width: 400px; }
+      .container-footer__informacion__contacto h1 {
+        font-size: 22px;
+        margin-left: 90px;
+        margin-top: 10px;
+        font-weight: bold;
+        padding-top: 20px; }
+        @media screen and (max-width: 600px) {
+          .container-footer__informacion__contacto h1 {
+            margin-left: 0; } }
+      .container-footer__informacion__contacto div {
+        margin-top: 20px;
+        margin-left: 90px;
+        color: #351a00; }
+        @media screen and (max-width: 600px) {
+          .container-footer__informacion__contacto div {
+            margin-left: 0; } }
+  .container-footer__copyright {
     background-color: #351a00;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px;
     padding-left: 80px;
-    padding-right: 80px;
-  }
-  .copyright {
-    color: #f6b511;
-    font-style: oblique;
-  }
-  
-  .terminos a {
-    color: white;
+    padding-right: 80px; }
+    @media screen and (max-width: 600px) {
+      .container-footer__copyright {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px; } }
+    .container-footer__copyright__derechos {
+      color: #f6b511;
+      font-style: oblique; }
+    .container-footer__copyright__terminos a {
+      color: white;
+      text-decoration: none; }
+
+#navbarNav a {
+  font-size: 18px;
+  color: #a56830;
+  text-shadow: 2px 2px 5px #d3b667; }
+  #navbarNav a:hover {
+    background: #f4d69a;
+    border-radius: 5px; }
+
+.btn-wsp {
+  height: 55px;
+  width: 55px;
+  position: fixed;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background: #0df053;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100; }
+  .btn-wsp:hover {
     text-decoration: none;
-  }
-  
+    color: #0df053;
+    background-color: white; }
+
+body {
+  color: #a56830;
+  font-family: "Zilla Slab", serif; }
+
+.carousel-inner {
+  max-height: 39rem; }
+
+.decoracion {
+  height: 200px;
+  width: 300px; }
   @media screen and (max-width: 600px) {
-    .container-footer {
-      flex-direction: column ;
-      justify-content: space-between;
+    .decoracion {
+      height: 50px;
+      width: 50px; } }
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #351a00; }
+  @media screen and (max-width: 600px) {
+    .encabezado {
+      display: flex;
       align-items: center;
-      text-align: center;
-    }
-    .row2{
-      margin-left: 0;
-    }
-    .row{
-      margin-left: 0;
-    }
-    .columna2 h1{
-      margin-left: 0;
-  
-  
-    }
-    .columna3 h1{
-      margin-left: 0;
-      
-    }
-    .container-footer2{
+      justify-content: space-between;
+      background-color: #351a00;
+      width: 100%; } }
+  .encabezado__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 80%;
+    width: 100%; }
+    @media screen and (max-width: 600px) {
+      .encabezado__container {
+        height: 45%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white; } }
+  .encabezado__titulo {
+    height: 100%;
+    width: 100%;
+    color: #a56830;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px; }
+    @media screen and (max-width: 600px) {
+      .encabezado__titulo {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 25px; } }
+
+@media screen and (max-width: 600px) {
+  .encabezado__container {
+    height: 45%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white; }
+  .encabezado__titulo {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px; } }
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f4d69a; }
+  .descripcion p {
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold; }
+    @media screen and (max-width: 600px) {
+      .descripcion p {
+        font-size: 16px;
+        margin-top: 10px; } }
+
+.tarifas__cards {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Zilla Slab", serif; }
+  @media screen and (max-width: 600px) {
+    .tarifas__cards {
+      flex-direction: column; } }
+
+.tarifas__fila {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  @media screen and (max-width: 600px) {
+    .tarifas__fila {
       flex-direction: column;
-      width: 100%;
-      padding-left: 10px;
-      padding-right: 10px;
-  
-    }
-    
-  }
+      align-items: center;
+      justify-content: space-between; } }
+
+.tarifas__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: #351a00;
+  width: 10%;
+  border-radius: 11px; }
+  @media screen and (max-width: 600px) {
+    .tarifas__card {
+      width: 80%;
+      height: 250px;
+      margin: 5px 5px; } }
+
+.tarifas__card-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #a56830;
+  background-color: #f6b511;
+  height: 33%;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold; }
+
+.tarifas__precio {
+  color: white;
+  font-weight: bold;
+  font-size: 22px; }
+
+.tarifas__card-button {
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #ffd143 0%, #ff9153 90%);
+  color: white;
+  border: 3px solid #f6b511;
+  border-radius: 11px;
+  width: 95%;
+  height: 25%;
+  margin-bottom: 7.5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative; }
+  .tarifas__card-button:hover {
+    color: #351a00;
+    background-image: linear-gradient(0.9deg, #fd9000 21.1%, #fee382 96.8%); }
+
+.tarifas__titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  /*Animaciones*/
+  animation-name: tarifas__titulo;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite; }
+  @media screen and (max-width: 600px) {
+    .tarifas__titulo {
+      font-size: 14px; } }
+
+@keyframes tarifas__titulo {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  100% {
+    text-shadow: 0 9px 18px rgba(0, 0, 0, 0.35); } }
