@@ -155,15 +155,15 @@
     <!-- ======================================================================-->
     <!-- Titulo-->
     <!-- ======================================================================-->
-    <main class="grid">
-      <section class="texto index">
+    <main class="grid-servicios">
+      <section class="encabezado">
         <img
           class="decoracion"
           src="../img/3_6_la_pampa_marron.png"
           alt="decoracion"
         />
-        <div class="texto__container">
-          <h1 class="texto__titulo index">Nuestros Servicios</h1>
+        <div class="encabezado__container">
+          <h1 class="encabezado__titulo">Nuestros Servicios</h1>
         </div>
         <img
           class="decoracion"
@@ -175,7 +175,7 @@
       <!-- Servicios-->
       <!-- ======================================================================-->
       <section class="servicios-page-flex">
-        <div class="servicios-page__textos">
+        <div id="servicio__gastronomia-texto" class="servicios-page__textos">
           <h2>Propuesta gastronómica</h2>
           <ul>
             <li>Restaurante</li>
@@ -183,21 +183,21 @@
             <li>Snack Bar</li>
           </ul>
         </div>
-        <div>
+        <div id="servicio__gastronomia-img">
           <img
             class="servicios-page__img"
             src="../img/post-desayuno-2-600x600.jpg"
             alt="Imagen desayuno"
           />
         </div>
-        <div>
+        <div id="servicio__masajes-img">
           <img
             class="servicios-page__img"
             src="../img/massage_face-600x400.jpg"
             alt="Imagen Masaje Facial"
           />
         </div>
-        <div class="servicios-page__textos">
+        <div id="servicio__masajes-texto" class="servicios-page__textos">
           <h2>Relax y Bienestar</h2>
           <ul>
             <li>Spa</li>
@@ -205,7 +205,7 @@
             <li>Piscina al aire libre</li>
           </ul>
         </div>
-        <div class="servicios-page__textos">
+        <div  id="servicio__amenities-texto" class="servicios-page__textos">
           <h2>Amenities</h2>
           <ul>
             <li>Amenities</li>
@@ -224,7 +224,7 @@
             <li>Estacionamiento</li>
           </ul>
         </div>
-        <div>
+        <div id="servicio__amenities-img">
           <img
             class="servicios-page__img"
             src="../img/jardines-3-600x450.jpg"
@@ -313,8 +313,8 @@
             <div class="capa">
               <h3>Mariana</h3>
               <p>
-                Nos sentimos como en casa, calidéz,amabilidad ,muy hermoso todo.
-                La atención del personal es sobresaliente.El hotel impecable
+                Nos sentimos como en casa, calidéz, amabilidad ,muy hermoso todo.
+                La atención del personal es sobresaliente. El hotel impecable.
               </p>
             </div>
           </figure>
@@ -337,10 +337,9 @@
     <!-- Footer-->
     <!-- ======================================================================-->
     <footer>
-      <div class="container-footer-all">
-        <div class="container-footer">
-          <div class="colum1"></div>
-          <div class="columna1">
+      <div class="container-footer">
+        <div class="container-footer__informacion">
+          <div class="container-footer__informacion__nosotros">
             <h1>Hotel La Quebrada</h1>
             <p>
               Somos un empresa familiar, que desde el año 1990 tiene como
@@ -349,7 +348,7 @@
               podrá compartir gratos momentos con sus seres queridos.
             </p>
           </div>
-          <div class="columna2">
+          <div class="container-footer__informacion__redes">
             <h1>Redes Sociales</h1>
             <div class="row">
               <i class="bi bi-facebook"> Seguinos en Facebook</i>
@@ -364,28 +363,28 @@
               <i class="bi bi-tiktok">Siguenos en Tik Tok</i>
             </div>
           </div>
-          <div class="columna3">
+          <div class="container-footer__informacion__contacto">
             <h1>Informacion -Contacto</h1>
-            <div class="row2">
+            <div>
               <i class="bi bi-house"></i>
               <label for="">Sargento Cabral 862, Y4624 Tilcara, Jujuy</label>
             </div>
-            <div class="row2">
+            <div>
               <i class="bi bi-telephone"></i>
               <label for="">0388 123-4567</label>
             </div>
-            <div class="row2">
+            <div>
               <i class="bi bi-envelope"></i>
               <label for="">laquebrada@gmail.com</label>
             </div>
           </div>
         </div>
       </div>
-      <div class="container-footer2">
-        <div class="copyright">
+      <div class="container-footer__copyright">
+        <div class="container-footer__copyright__derechos">
           © Copyright - La Quebrada - Todos los Derechos Reservados
         </div>
-        <div class="terminos">
+        <div class="container-footer__copyright__terminos">
           <a href="">Informacion Compañia</a> |
           <a href="">Privación y Política</a> |
           <a href="">Terminos y condiciones</a>
