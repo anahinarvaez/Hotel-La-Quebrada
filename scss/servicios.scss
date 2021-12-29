@@ -1,0 +1,186 @@
+@import "variables";
+@import "footer";
+@import "nav";
+@import "wpp";
+@import "mixin";
+@import "compartido";
+@import "encabezado";
+
+@media screen and (max-width: $phone) {
+  .encabezado__titulo {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.servicios-page {
+  &-flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    background-color: $claro;
+
+    @media screen and (max-width: $phone) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      #servicio__gastronomia-texto {
+        order: 1;
+      }
+      #servicio__gastronomia-img {
+        order: 2;
+      }
+      #servicio__masajes-texto {
+        order: 3;
+      }
+      #servicio__masajes-img {
+        order: 4;
+      }
+
+      #servicio__amenities-texto {
+        order: 5;
+      }
+
+      #servicio__amenities-img {
+        order: 6;
+      }
+    }
+
+    div {
+      width: 50%;
+      height: 600px;
+      background-color: $blanco;
+
+      @media screen and (max-width: $phone) {
+        @include sizes(98%, 450px);
+      }
+    }
+  }
+
+  &__textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+
+    ul {
+      list-style: none;
+      margin: 30px;
+    }
+  }
+
+  &__img {
+    @include sizes(100%, 100%);
+  }
+}
+
+.conteiner-valoracion {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5%;
+  align-items: center;
+  background: $claro;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  height: 20vh;
+
+  @media screen and (max-width: $phone) {
+    font-size: 24px;
+    padding-top: 15px;
+    height: 10vh;
+  }
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background: $claro;
+  background: -webkit-radial-gradient(center, $claro, $principal);
+  background: -moz-radial-gradient(center, $claro, $principal);
+  background: radial-gradient(ellipse at center, $claro, $principal);
+  border: groove;
+
+  @media screen and (max-width: $phone) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-calificaciones {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+
+    @media screen and (max-width: $phone) {
+      width: 80%;
+      height: 35vh;
+    }
+
+    figure {
+      position: relative;
+      height: 250px;
+      width: 350px;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-out;
+      }
+      .capa {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(16, 101, 141, 0.7);
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+
+        h3 {
+          color: $blanco;
+          font-weight: 400px;
+          margin-bottom: 120px;
+          transition: all 500ms ease-out;
+          margin-top: 30px;
+        }
+
+        p {
+          color: $blanco;
+          font-size: 15px;
+          line-height: 1.5;
+          width: 100%;
+          max-width: 220px;
+          margin: auto;
+        }
+      }
+      &:hover {
+        & > .capa {
+          opacity: 1;
+          visibility: visible;
+
+          h3 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+          }
+        }
+
+        & > img {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}

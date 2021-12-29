@@ -158,14 +158,14 @@ body {
   }
 }
 
-.encabezado {
+.encabezado, .encabezado-index {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #351a00;
 }
 @media screen and (max-width: 600px) {
-  .encabezado {
+  .encabezado, .encabezado-index {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -215,151 +215,182 @@ body {
   grid-template-rows: auto 1fr;
 }
 
-.servicios-page-grid {
-  display: grid;
-  grid-template-rows: 1fr 1fr 2fr;
+.encabezado-index .encabezado__titulo {
+  margin-bottom: 60px;
 }
-.servicios-page-flex {
+.encabezado-index .encabezado__subtitulo {
+  font-size: 22px;
+  margin-top: 42px;
+}
+@media screen and (max-width: 600px) {
+  .encabezado-index .encabezado__container {
+    height: 80%;
+  }
+  .encabezado-index .encabezado__titulo {
+    margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+  .encabezado-index .encabezado__subtitulo {
+    font-size: 12px;
+    margin-top: 7px;
+  }
+}
+
+.habitaciones {
   display: flex;
-  flex-wrap: wrap;
-  padding-top: 100px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: #f4d69a;
 }
+.habitaciones__titulo {
+  margin: 75px 25px;
+  font-size: 32px;
+  font-weight: bold;
+}
 @media screen and (max-width: 600px) {
-  .servicios-page-flex {
-    grid-gap: 5px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
+  .habitaciones__titulo {
+    margin: 15px 15px;
+    font-size: 28px;
   }
 }
-.servicios-page-flex div {
-  width: 50%;
-  height: 33.33%;
+.habitaciones__grid {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (max-width: 600px) {
+  .habitaciones__grid {
+    display: grid;
+    grid-template-columns: 400px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.habitaciones__img {
+  height: 100%;
+  width: 100%;
+}
+.habitaciones__img:hover {
+  transform: scale(2, 2);
+}
+.habitaciones__descripcion {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
   background-color: white;
 }
-@media screen and (max-width: 600px) {
-  .servicios-page-flex div {
-    height: 40%;
-    width: 98%;
-  }
-}
-.servicios-page__textos {
+
+.mapa {
+  background-color: white;
+  padding-top: 15px;
   display: flex;
-  flex-direction: column;
+  gap: 50px;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding-top: 20px;
 }
-.servicios-page__textos ul {
-  list-style: none;
-  margin: 30px;
-}
-.servicios-page__img {
-  height: 100%;
-  width: 100%;
-}
-
-.conteiner-valoracion {
+.mapa__contenido {
+  height: 70%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  padding-top: 2.5%;
-  align-items: center;
-  background: #f4d69a;
-  font-size: 36px;
-  text-align: center;
-  font-weight: bold;
-  height: 20vh;
+  justify-content: space-evenly;
+}
+.mapa__img {
+  height: 70%;
+  width: 30%;
 }
 @media screen and (max-width: 600px) {
-  .conteiner-valoracion {
-    font-size: 24px;
+  .mapa {
+    background-color: white;
     padding-top: 15px;
-    height: 10vh;
-  }
-}
-
-.contenedor {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  background: #f4d69a;
-  background: -webkit-radial-gradient(center, #f4d69a, #a56830);
-  background: -moz-radial-gradient(center, #f4d69a, #a56830);
-  background: radial-gradient(ellipse at center, #f4d69a, #a56830);
-  border: groove;
-}
-@media screen and (max-width: 600px) {
-  .contenedor {
     display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
+  .mapa__img {
+    width: 70%;
+    height: 70%;
+    margin-bottom: 20px;
+  }
+  .mapa__contenido {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
-.contenedor-calificaciones {
-  width: 33.33%;
+
+.slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4d69a;
+  font-size: 36px;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .slogan {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.servicios div {
+  height: 50%;
+  width: 50%;
+}
+.servicios__img {
+  height: 100%;
+  width: 100%;
+}
+.servicios__descripcion {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 55vh;
-}
-@media screen and (max-width: 600px) {
-  .contenedor-calificaciones {
-    width: 80%;
-    height: 35vh;
-  }
-}
-.contenedor-calificaciones figure {
-  position: relative;
-  height: 250px;
-  width: 350px;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-.contenedor-calificaciones figure img {
-  width: 100%;
-  height: 100%;
-  transition: all 500ms ease-out;
-}
-.contenedor-calificaciones figure .capa {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(16, 101, 141, 0.7);
-  transition: all 500ms ease-out;
-  opacity: 0;
-  visibility: hidden;
+  flex-direction: column;
   text-align: center;
 }
-.contenedor-calificaciones figure .capa h3 {
-  color: white;
-  font-weight: 400px;
-  margin-bottom: 120px;
-  transition: all 500ms ease-out;
-  margin-top: 30px;
-}
-.contenedor-calificaciones figure .capa p {
-  color: white;
-  font-size: 15px;
-  line-height: 1.5;
-  width: 100%;
-  max-width: 220px;
-  margin: auto;
-}
-.contenedor-calificaciones figure:hover > .capa {
-  opacity: 1;
-  visibility: visible;
-}
-.contenedor-calificaciones figure:hover > .capa h3 {
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-.contenedor-calificaciones figure:hover > img {
-  transform: scale(1.3);
+@media screen and (max-width: 600px) {
+  .servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+  }
+  .servicios div {
+    height: 50%;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .servicios #servicios__descripcion-restaurante {
+    order: 1;
+  }
+  .servicios #servicios__img-restaurante {
+    order: 2;
+  }
+  .servicios #servicios__descripcion-spa {
+    order: 3;
+  }
+  .servicios #servicios__img-spa {
+    order: 4;
+  }
 }
 
-/*# sourceMappingURL=servicios.css.map */
+/*# sourceMappingURL=index.css.map */

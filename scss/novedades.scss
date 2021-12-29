@@ -1,32 +1,24 @@
 @import "variables";
 @import "footer";
 @import "nav";
+@import "wpp";
+@import "mixin";
+@import "compartido";
+@import "encabezado";
 
-@mixin sizes($width, $height) {
-  height: $height;
-  width: $width;
-}
-
-$lugares:(
+$lugares: (
   cerro-7colores: #4d2b39,
   garganta-del-diablo: #5acbe7,
   salinas: #b2dd14,
-  hornocal: #20bf55
-  );
-
-$fuentes:(
-  titulo: (color: $principal, tamaño: 64px),
-  subtitulos: (color: $oscuro, tamaño: 24px),
-  texto: (color: $principal, tamaño:18px),
+  hornocal: #20bf55,
 );
 
-body {
-  color: $principal;
-  font-family: "Zilla Slab", serif;
-}
-
-.carousel-inner {
-  max-height: 39rem;
+@media screen and (max-width: $phone) {
+  .encabezado__titulo {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 .grid-novedades {
@@ -35,68 +27,8 @@ body {
 
   @media screen and (max-width: $phone) {
     display: grid;
-    grid-template-rows: 0.2fr 1.5fr;
+    grid-template-rows: 0.1fr 1.5fr;
     grid-template-columns: 100%;
-  }
-}
-
-.decoracion {
-  @include sizes(300px, 200px);
-
-  @media screen and (max-width: $phone) {
-    @include sizes(50px, 50px);
-  }
-}
-
-.encabezado {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $oscuro;
-
-  @media screen and (max-width: $phone) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $oscuro;
-    width: 100%;
-  }
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: $blanco;
-    @include sizes(100%, 80%);
-
-    @media screen and (max-width: $phone) {
-      @include sizes(80%, 45%);
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: $blanco;
-    }
-  }
-
-  &__titulo {
-    @include sizes(100%, 100%);
-
-    color: map-get($fuentes , titulo, color );
-
-    font-size: map-get($fuentes , titulo, tamaño );
-    font-weight: bold;
-    text-align: center;
-
-    margin-top: 40px;
-
-    @media screen and (max-width: $phone) {
-      font-size: 18px;
-      text-align: center;
-      margin-top: 25px;
-    }
   }
 }
 
@@ -108,7 +40,7 @@ body {
     height: 80px;
     background-color: $claro;
     font-size: map-get($fuentes, subtitulos, tamaño);
-    color: map-get($fuentes, subtitulos, color );
+    color: map-get($fuentes, subtitulos, color);
 
     @media screen and (max-width: $phone) {
       p {
@@ -140,15 +72,14 @@ body {
     @include sizes(100%, 90%);
     &__img {
       @include sizes(100%, 80%);
-      
+
       @each $lugar, $color in $lugares {
         &##{$lugar}:hover {
           transform: scale(1.5, 1.5);
-          border: 8px solid $color; 
+          border: 8px solid $color;
         }
       }
     }
-
 
     &__descripcion {
       display: flex;
@@ -160,20 +91,13 @@ body {
       background-color: $claro;
       height: 45px;
 
-      
-    @each $lugar, $color in $lugares{
-
-      &-#{$lugar} {
-        @extend .novedades__tarjeta__descripcion ;
-        background-color: $color;
+      @each $lugar, $color in $lugares {
+        &-#{$lugar} {
+          @extend .novedades__tarjeta__descripcion;
+          background-color: $color;
+        }
       }
-
     }
-
-    }
-
-
-
   }
 }
 
@@ -201,27 +125,5 @@ body {
     font-size: 22px;
     color: $oscuro;
     background-color: $amarillo;
-  }
-}
-
-.btn-wsp {
-  @include sizes(55px, 55px);
-
-  position: fixed;
-  line-height: 55px;
-  bottom: 30px;
-  right: 30px;
-  background: #0df053;
-  color: $blanco;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-  z-index: 100;
-
-  &:hover {
-    text-decoration: none;
-    color: #0df053;
-    background-color: $blanco;
   }
 }

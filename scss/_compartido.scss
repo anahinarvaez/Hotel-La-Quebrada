@@ -1,0 +1,20 @@
+body {
+    color: $principal;
+    font-family: "Zilla Slab", serif;
+  }
+  
+
+
+.carousel-inner {
+    max-height: 39rem;
+}
+
+.decoracion {
+    @include sizes(300px, 200px);
+  
+    @media screen and (max-width: $phone) {
+      @include sizes(50px, 50px);
+    }
+  }
+  
+

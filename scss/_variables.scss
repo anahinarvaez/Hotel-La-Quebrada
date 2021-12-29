@@ -5,3 +5,11 @@ $oscuro: #351a00;
 $blanco: white;
 $amarillo: #f6b511;
 $phone: 600px;
+$negro: black;
+
+
+$fuentes:(
+  titulo: (color: $principal, tamaño: 64px),
+  subtitulos: (color: $oscuro, tamaño: 24px),
+  texto: (color: $principal, tamaño:18px),
+);
